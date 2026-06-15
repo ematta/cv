@@ -1,0 +1,20 @@
+.button {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.35rem 0.65rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition:
+    border-color var(--transition),
+    color var(--transition);
+  line-height: 1;
+}
+
+.button:hover {
+  border-color: var(--primary);
+  color: var(--text);
+}

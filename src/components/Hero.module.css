@@ -1,0 +1,77 @@
+.hero {
+  padding: 4rem 0 2rem;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.contactLink {
+  color: var(--primary);
+}
+
+.separator {
+  color: var(--border);
+  user-select: none;
+}
+
+.summary {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 720px;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .contact {
+    gap: 0.3rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .contactItem {
+    width: 100%;
+  }
+}
