@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CV — Enrique Matta-Rodriguez
 
-## Getting Started
+A [Next.js](https://nextjs.org) resume site powered by [JSON Resume](https://jsonresume.org), an open-source standard for resumes.
 
-First, run the development server:
+## Data
+
+Resume content lives in `src/data/resume.json` as a [JSON Resume v1.0.0](https://jsonresume.org/schema/) schema. Edit this file to update your resume.
+
+## Routes
+
+| Route | Description |
+|---|---|
+| `/` | Main interactive resume with navigation, timeline, skills grid, and theme toggle |
+| `/themed` | Print-friendly themed layout for PDF export |
+
+## Scripts
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # Start dev server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run test     # Run Vitest tests (watch mode)
+npm run test:run # Run Vitest tests (single run)
+npm run validate # Validate resume.json against JSON Resume schema
+npm run lint     # Biome lint
+npm run format   # Biome format
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Test structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tests use [Vitest](https://vitest.dev) + [React Testing Library](https://testing-library.com/react):
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/lib/__tests__/` — Utility function tests (`formatDate`, `formatEducationDate`)
+- `src/data/__tests__/` — Data integrity tests (required fields, types)
+- `src/components/__tests__/` — Component rendering tests (Hero, Timeline, SkillsGrid, ThemedResume)
 
-## Learn More
+### Writing tests
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run test           # Watch mode
+npm run test:run       # CI mode
+npm run validate       # Validate JSON schema
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Next.js 16** — App Router, static generation
+- **JSON Resume** — Standardized resume schema, validated via `resume-cli`
+- **Vitest** — Unit testing
+- **CSS Modules** — Component-scoped styling
+- **Biome** — Linting and formatting

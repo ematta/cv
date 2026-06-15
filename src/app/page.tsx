@@ -3,6 +3,7 @@ import SkillsGrid from "@/components/SkillsGrid";
 import SmoothNav from "@/components/SmoothNav";
 import Timeline from "@/components/Timeline";
 import { resume } from "@/data/resume";
+import { formatEducationDate } from "@/lib/utils";
 import styles from "./page.module.css";
 
 const NAV_SECTIONS = [
@@ -18,14 +19,14 @@ export default function Home() {
     <div className={styles.page}>
       <SmoothNav sections={NAV_SECTIONS} />
       <div className={styles.container}>
-        <Hero contact={resume.contact} />
+        <Hero basics={resume.basics} />
 
         <section id="experience" className={styles.section}>
           <h2 className={styles.sectionTitle}>
             Experience
             <span className={styles.sectionTitleAccent} />
           </h2>
-          <Timeline jobs={resume.experience} />
+          <Timeline jobs={resume.work ?? []} />
         </section>
 
         <section id="skills" className={styles.section}>
@@ -33,7 +34,7 @@ export default function Home() {
             Skills
             <span className={styles.sectionTitleAccent} />
           </h2>
-          <SkillsGrid groups={resume.skills} />
+          <SkillsGrid groups={resume.skills ?? []} />
         </section>
 
         <section id="education" className={styles.section}>
@@ -42,13 +43,17 @@ export default function Home() {
             <span className={styles.sectionTitleAccent} />
           </h2>
           <div className={styles.sectionList}>
-            {resume.education.map((edu) => (
-              <div key={edu.degree} className={styles.listItem}>
-                <div className={styles.itemTitle}>{edu.degree}</div>
-                <div className={styles.itemSub}>{edu.school}</div>
+            {resume.education?.map((edu) => (
+              <div
+                key={`${edu.institution}-${edu.studyType}`}
+                className={styles.listItem}
+              >
+                <div className={styles.itemTitle}>
+                  {[edu.studyType, edu.area].filter(Boolean).join(", ")}
+                </div>
+                <div className={styles.itemSub}>{edu.institution}</div>
                 <div className={styles.itemMeta}>
-                  {edu.years}
-                  {edu.status ? ` \u00B7 ${edu.status}` : ""}
+                  {formatEducationDate(edu)}
                 </div>
               </div>
             ))}
@@ -61,7 +66,7 @@ export default function Home() {
             <span className={styles.sectionTitleAccent} />
           </h2>
           <div className={styles.sectionList}>
-            {resume.certifications.map((cert) => (
+            {resume.certificates?.map((cert) => (
               <div key={cert.name} className={styles.listItem}>
                 <div className={styles.itemTitle}>{cert.name}</div>
                 <div className={styles.itemSub}>{cert.issuer}</div>
@@ -76,7 +81,7 @@ export default function Home() {
             Professional Summary
             <span className={styles.sectionTitleAccent} />
           </h2>
-          <p className={styles.summary}>{resume.summary}</p>
+          <p className={styles.summary}>{resume.basics.summary}</p>
         </section>
 
         <footer className={`${styles.footer} no-print`}>

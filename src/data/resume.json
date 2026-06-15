@@ -1,0 +1,255 @@
+{
+  "basics": {
+    "name": "Enrique Matta-Rodriguez",
+    "label": "Software Engineering Manager",
+    "image": "",
+    "email": "enrique.j.matta@gmail.com",
+    "phone": "210-570-6667",
+    "url": "https://ematta.dev",
+    "summary": "Software Engineering Manager and working manager spending approximately 50% of time in direct technical contribution \u2014 including production feature development, API architecture, MCP server development, CI/CD pipeline ownership, and code reviews. Proven track record of building high-performing teams, navigating organizational change, and delivering quality-driven engineering programs at scale. Led teams of up to 10 engineers spanning full-time staff and contractors across onshore and offshore models. Brings 14+ years of progressive engineering experience spanning production software development, QA automation, and platform infrastructure. Currently pursuing a Master of Science in Organizational Leadership.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "San Antonio",
+      "countryCode": "US",
+      "region": "Texas"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "ematta",
+        "url": "https://github.com/ematta"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Shutterstock",
+      "position": "Manager, Software Development",
+      "startDate": "2024-04",
+      "highlights": [
+        "Serve as a working manager, spending approximately 50% of time in direct technical contribution \u2014 including production feature development, API architecture, code reviews, and CI/CD pipeline ownership \u2014 alongside full people management responsibilities for a team of up to 10 engineers (4 FTE, 6 contractors).",
+        "Led production engineering work on Shutterstock\u2019s Contributor platform \u2014 responsible for all contributor content ingestion and submission workflows \u2014 including a hands-on migration of core APIs from REST to GraphQL, improving query efficiency, reducing over-fetching, and modernizing the integration layer for downstream consumers.",
+        "Architected and delivered an MCP (Model Context Protocol) server as a shim in front of the contributor API layer, enabling AI tooling to interact with backend upload workflows and integrating AI capabilities directly into engineering processes.",
+        "Led client-side facial detection model work and managed delivery of Release Form Similarity, both shipped to production; improvements scaled ingestion quality, reduced reviewer kickbacks, and shortened asset approval time.",
+        "Owned and maintained all CI pipeline infrastructure for the team, ensuring reliability, performance, and developer productivity across continuous integration workflows.",
+        "Led people management including regular one-on-ones, performance reviews, and career development conversations to support individual growth and team retention.",
+        "Merged two distinct engineering teams (Contributor Apps and Review Apps) into a single cohesive cross-functional unit, driving knowledge cross-pollination, eliminating delivery silos, and maintaining team stability through the transition.",
+        "Guided the organization through two company-wide restructuring events while preserving team continuity and morale.",
+        "Drove methodology change from Agile Sprint to Shape Up, improving project scoping discipline and delivery predictability.",
+        "Partnered with cross-functional stakeholders to implement company-wide QA policies and enablement programs, improving test efficiency by 15% across teams."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Shutterstock",
+      "position": "Software Engineer in Test III",
+      "startDate": "2022-07",
+      "endDate": "2024-05",
+      "highlights": [
+        "Provided technical leadership and people management to a 4-person QA team, setting shared objectives across sprint testing, automation, and continuous improvement.",
+        "Led migration of 120 Puppeteer tests to Playwright, reducing pipeline failures by over 50% and establishing a modern, maintainable test foundation for the team.",
+        "Transitioned team workflow from Kanban to Agile Sprint, resulting in a 75% improvement in time to completion and greater alignment with cross-functional delivery expectations.",
+        "Spearheaded refactoring of a flaky Jenkins pipeline, improving CI reliability and removing a recurring source of developer friction.",
+        "Developed comprehensive load testing strategy utilizing Artillery, Playwright, and Fargate/EC2 Container technologies."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Grid.ai",
+      "position": "Senior Software Engineer in Test",
+      "startDate": "2021-11",
+      "endDate": "2022-06",
+      "highlights": [
+        "Established a quality-focused engineering culture by introducing QAOps/DevTestOps principles, training materials, and 1:1 coaching programs for developers and technical leads.",
+        "Managed two contractors in executing quality-related tasks within an agile environment, overseeing daily CI/CD deployment workflows.",
+        "Implemented daily releases via GitHub Actions with post-release acceptance test validations, achieving a 20% improvement in Mean Time to Recovery.",
+        "Collaborated with the People Team on SOC2 compliance, covering vulnerability scanning, change management, and file integrity workflows.",
+        "Developed an end-to-end test framework utilizing Cypress Test Framework, enabling increased confidence in daily releases."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Knock",
+      "position": "Senior Software Engineer in Test",
+      "startDate": "2020-09",
+      "endDate": "2021-11",
+      "highlights": [
+        "Fostered a quality-centric engineering culture through coaching, cross-team education on modern testing principles, and introduction of a bug bash process for two major platform releases.",
+        "Developed an end-to-end test framework in Node.js and Playwright, integrated into the CI pipeline via docker-compose, reducing failure rates by 15%.",
+        "Established a mobile E2E framework using Node.js and Detox for React Native, covering both Android and iOS build targets.",
+        "Implemented On-Call rotation using Datadog and PagerDuty integration and standardized the Root Cause Analysis process for engineering postmortems."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Elastic",
+      "position": "Cloud QA Engineer",
+      "startDate": "2017-12",
+      "endDate": "2020-05",
+      "highlights": [
+        "Drove adoption of quality best practices across cross-functional teams by contributing to integration and functional test frameworks and encouraging QA engagement in GitHub pull request workflows.",
+        "Delivered test frameworks in Node.js/Webdriver.io, Python, and Scala targeting billing infrastructure and microservices, integrated with Jenkins CI and reporting to Elasticsearch/Kibana."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Carbon Black, Inc.",
+      "position": "Software Development Engineer in Test",
+      "startDate": "2017-01",
+      "endDate": "2017-12",
+      "highlights": [
+        "Delivered API and UI test frameworks in Python (pytest, Selenium, SwaggerApi) for Next-Generation Antivirus cloud endpoints; mentored QA team members in adopting testing tools within their respective scrum teams."
+      ],
+      "location": "Remote"
+    },
+    {
+      "name": "Rackspace",
+      "position": "Software Developer II / SDET II",
+      "startDate": "2014-11",
+      "endDate": "2017-12",
+      "highlights": [
+        "Led and mentored QA engineers in automation best practices, contributed to cross-team frameworks, and architected RESTful applications in Python and Flask alongside QA load testing initiatives using Gatling."
+      ],
+      "location": "San Antonio, TX"
+    },
+    {
+      "name": "Westpoint Underwriters",
+      "position": "Quality Assurance Engineer",
+      "startDate": "2010-10",
+      "endDate": "2014-11",
+      "highlights": [
+        "Orchestrated the creation of the QA Automation department from the ground up, introduced Agile Kanban methodology, and supervised two Software Development Engineers in Test.",
+        "Developed a UI test framework in Ruby, WATIR, and Cucumber for Insurance and Underwriting portals, and engineered QA tooling including SQL/HTML/Excel/PDF comparison utilities and JMeter load tests with d3 visualization reports."
+      ],
+      "location": "Pinellas Park, FL"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Amberton University",
+      "area": "Organizational Leadership",
+      "studyType": "Master of Science",
+      "startDate": "2024"
+    },
+    {
+      "institution": "Webster University",
+      "area": "",
+      "studyType": "Master of Business Administration",
+      "startDate": "2016",
+      "endDate": "2019"
+    },
+    {
+      "institution": "DeVry University",
+      "area": "Computer Information Systems",
+      "studyType": "Bachelor of Science",
+      "startDate": "2002",
+      "endDate": "2006"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Google People Management Essentials",
+      "issuer": "Google / Coursera",
+      "date": "2025-12"
+    },
+    {
+      "name": "Google Advanced Data Analytics",
+      "issuer": "Google / Coursera",
+      "date": "2024-11"
+    },
+    {
+      "name": "Google Data Analytics",
+      "issuer": "Google / Coursera",
+      "date": "2024-07"
+    }
+  ],
+  "skills": [
+    {
+      "name": "People Management",
+      "level": "Expert",
+      "keywords": [
+        "Performance Management",
+        "Career Development",
+        "Hiring",
+        "Coaching & Mentoring",
+        "Workforce Planning",
+        "Organizational Change Management",
+        "Onshore/Offshore Team Leadership"
+      ]
+    },
+    {
+      "name": "Engineering Leadership",
+      "level": "Expert",
+      "keywords": [
+        "Agile",
+        "Shape Up",
+        "Kanban",
+        "Cross-functional Stakeholder Alignment",
+        "Org Design",
+        "CI/CD Strategy",
+        "QA Policy Development"
+      ]
+    },
+    {
+      "name": "Production Engineering",
+      "level": "Expert",
+      "keywords": [
+        "GraphQL",
+        "REST API Design",
+        "Node.js",
+        "TypeScript",
+        "Python",
+        "MCP Server Development",
+        "API Architecture",
+        "Microservices"
+      ]
+    },
+    {
+      "name": "Test Automation",
+      "level": "Advanced",
+      "keywords": [
+        "Playwright",
+        "Cypress",
+        "Selenium",
+        "WebdriverIO",
+        "Detox",
+        "Puppeteer",
+        "Jest",
+        "pytest",
+        "Gatling"
+      ]
+    },
+    {
+      "name": "CI/CD & DevOps",
+      "level": "Advanced",
+      "keywords": [
+        "GitHub Actions",
+        "Jenkins",
+        "CircleCI",
+        "Docker",
+        "Terraform",
+        "Ansible",
+        "SOC2 Compliance"
+      ]
+    },
+    {
+      "name": "Platforms & Tools",
+      "level": "Intermediate",
+      "keywords": [
+        "Jira",
+        "Datadog",
+        "PagerDuty",
+        "SonarCloud",
+        "Elasticsearch/Kibana",
+        "Ruby",
+        "Scala"
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://ematta.dev",
+    "version": "v1.0.0",
+    "lastModified": "2026-06-15"
+  }
+}
