@@ -300,7 +300,7 @@ export default function ResumeDocument({
               <View key={`${cert.name}-${i}`} style={styles.certEntry}>
                 <View style={styles.entryRow}>
                   <Text style={styles.certName}>{cert.name}</Text>
-                  <Text style={styles.dates}>{cert.date}</Text>
+                  <Text style={styles.dates}>{formatDate(cert.date)}</Text>
                 </View>
                 {cert.issuer && (
                   <Text style={styles.certIssuer}>{cert.issuer}</Text>
