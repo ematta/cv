@@ -1,111 +1,135 @@
-import { Document, Page, StyleSheet, Text, View } from "@react-pdf/renderer";
+import {
+  Document,
+  Font,
+  Page,
+  StyleSheet,
+  Text,
+  View,
+} from "@react-pdf/renderer";
 import type { JsonResume } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 
+Font.registerHyphenationCallback((word) => [word]);
+
+const PAGE_PADDING = 36;
+
 const styles = StyleSheet.create({
   page: {
-    padding: 42,
+    padding: PAGE_PADDING,
+    paddingBottom: PAGE_PADDING + 6,
     fontFamily: "Helvetica",
-    fontSize: 10,
+    fontSize: 9,
     lineHeight: 1.35,
     color: "#000000",
   },
+  header: {
+    marginBottom: 16,
+  },
   name: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 3,
+    lineHeight: 1.2,
+    marginBottom: 6,
   },
   label: {
-    fontSize: 12,
+    fontSize: 11,
+    lineHeight: 1.3,
     color: "#333333",
     marginBottom: 6,
   },
   contact: {
-    fontSize: 9.5,
+    fontSize: 9,
+    lineHeight: 1.4,
     color: "#333333",
-    marginBottom: 14,
   },
   section: {
-    marginBottom: 11,
+    marginBottom: 10,
   },
   sectionTitle: {
-    fontSize: 11,
+    fontSize: 10.5,
     fontWeight: "bold",
     textTransform: "uppercase",
-    letterSpacing: 1.5,
+    letterSpacing: 1,
+    lineHeight: 1.3,
     borderBottomWidth: 1,
     borderBottomColor: "#000000",
-    paddingBottom: 2,
-    marginBottom: 5,
+    paddingBottom: 3,
+    marginBottom: 6,
   },
   summaryText: {
-    fontSize: 9.5,
-    lineHeight: 1.5,
+    fontSize: 9,
+    lineHeight: 1.45,
     color: "#222222",
-    textAlign: "justify",
   },
   entry: {
-    marginBottom: 7,
+    marginBottom: 8,
   },
   entryRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "baseline",
-    marginBottom: 1,
+    marginBottom: 3,
   },
-  entryLeft: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    flexWrap: "wrap",
+  entryTitle: {
     flex: 1,
+    paddingRight: 8,
   },
   position: {
     fontWeight: "bold",
-    fontSize: 10.5,
+    fontSize: 10,
+    lineHeight: 1.3,
   },
   at: {
-    fontSize: 10,
+    fontSize: 9.5,
+    lineHeight: 1.3,
     color: "#555555",
-    marginHorizontal: 2,
   },
   company: {
-    fontSize: 10.5,
+    fontSize: 10,
+    lineHeight: 1.3,
   },
   dates: {
     fontSize: 9,
+    lineHeight: 1.3,
     color: "#555555",
     whiteSpace: "nowrap",
   },
   highlightsList: {
-    marginTop: 2,
+    marginTop: 3,
   },
   bullet: {
     flexDirection: "row",
-    marginBottom: 1.5,
+    marginBottom: 3,
   },
   bulletDot: {
     width: 7,
-    fontSize: 9.5,
-    lineHeight: 1.45,
+    fontSize: 9,
+    lineHeight: 1.4,
   },
   bulletText: {
     flex: 1,
-    fontSize: 9.5,
-    lineHeight: 1.45,
+    fontSize: 9,
+    lineHeight: 1.4,
     color: "#222222",
   },
-  skillRow: {
+  skillsGrid: {
     flexDirection: "row",
-    fontSize: 9.5,
-    marginBottom: 2.5,
-    color: "#222222",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+  },
+  skillColumn: {
+    width: "48%",
+    marginBottom: 8,
   },
   skillCategory: {
     fontWeight: "bold",
-    fontSize: 9.5,
+    fontSize: 9,
+    lineHeight: 1.3,
+    marginBottom: 2,
   },
   skillKeywords: {
-    fontSize: 9.5,
+    fontSize: 9,
+    lineHeight: 1.4,
     color: "#222222",
   },
   eduEntry: {
@@ -113,56 +137,62 @@ const styles = StyleSheet.create({
   },
   eduDegree: {
     fontWeight: "bold",
-    fontSize: 10.5,
+    fontSize: 10,
+    lineHeight: 1.3,
   },
   eduSchool: {
-    fontSize: 10,
+    fontSize: 9,
+    lineHeight: 1.3,
     color: "#333333",
+    marginTop: 2,
   },
   certEntry: {
-    marginBottom: 4,
+    marginBottom: 5,
   },
   certName: {
     fontWeight: "bold",
-    fontSize: 10.5,
+    fontSize: 10,
+    lineHeight: 1.3,
   },
   certIssuer: {
-    fontSize: 9.5,
+    fontSize: 9,
+    lineHeight: 1.3,
     color: "#555555",
+    marginTop: 2,
   },
   footer: {
     position: "absolute",
-    bottom: 24,
-    left: 42,
-    right: 42,
+    bottom: 22,
+    left: PAGE_PADDING,
+    right: PAGE_PADDING,
     textAlign: "center",
-    fontSize: 8.5,
-    color: "#888888",
+    fontSize: 8,
+    lineHeight: 1.3,
+    color: "#777777",
   },
 });
 
 interface ResumeDocumentProps {
   resume: JsonResume;
+  maxHighlightsPerJob?: number;
 }
 
-function DateRange({
-  start,
-  end,
-  isEducation,
-}: {
-  start?: string;
-  end?: string;
-  isEducation?: boolean;
-}) {
+function formatDateRange(
+  start?: string,
+  end?: string,
+  isEducation = false,
+): string {
   const fmtStart = formatDate(start);
   if (!end) {
-    const suffix = isEducation ? "In Progress" : "Present";
-    return <Text>{`${fmtStart} – ${suffix}`}</Text>;
+    return `${fmtStart} – ${isEducation ? "In Progress" : "Present"}`;
   }
-  return <Text>{`${fmtStart} – ${formatDate(end)}`}</Text>;
+  return `${fmtStart} – ${formatDate(end)}`;
 }
 
-export default function ResumeDocument({ resume }: ResumeDocumentProps) {
+export default function ResumeDocument({
+  resume,
+  maxHighlightsPerJob = Number.POSITIVE_INFINITY,
+}: ResumeDocumentProps) {
   const { basics, work, skills, education, certificates } = resume;
 
   const location = [basics.location?.city, basics.location?.region]
@@ -174,12 +204,19 @@ export default function ResumeDocument({ resume }: ResumeDocumentProps) {
   if (basics.phone) contact.push(basics.phone);
   if (basics.email) contact.push(basics.email);
 
+  const trimmedWork = work?.map((job) => ({
+    ...job,
+    highlights: job.highlights?.slice(0, maxHighlightsPerJob),
+  }));
+
   return (
     <Document>
       <Page size="LETTER" style={styles.page}>
-        <Text style={styles.name}>{basics.name}</Text>
-        <Text style={styles.label}>{basics.label}</Text>
-        <Text style={styles.contact}>{contact.join(" · ")}</Text>
+        <View style={styles.header}>
+          <Text style={styles.name}>{basics.name}</Text>
+          <Text style={styles.label}>{basics.label}</Text>
+          <Text style={styles.contact}>{contact.join(" · ")}</Text>
+        </View>
 
         {basics.summary && (
           <View style={styles.section}>
@@ -188,22 +225,22 @@ export default function ResumeDocument({ resume }: ResumeDocumentProps) {
           </View>
         )}
 
-        {work && work.length > 0 && (
+        {trimmedWork && trimmedWork.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Experience</Text>
-            {work.map((job, i) => (
+            {trimmedWork.map((job, i) => (
               <View
                 key={`${job.name}-${job.position}-${i}`}
                 style={styles.entry}
               >
                 <View style={styles.entryRow}>
-                  <View style={styles.entryLeft}>
+                  <Text style={styles.entryTitle}>
                     <Text style={styles.position}>{job.position}</Text>
-                    <Text style={styles.at}>at</Text>
+                    <Text style={styles.at}> at </Text>
                     <Text style={styles.company}>{job.name}</Text>
-                  </View>
+                  </Text>
                   <Text style={styles.dates}>
-                    <DateRange start={job.startDate} end={job.endDate} />
+                    {formatDateRange(job.startDate, job.endDate)}
                   </Text>
                 </View>
                 {job.highlights && job.highlights.length > 0 && (
@@ -224,14 +261,16 @@ export default function ResumeDocument({ resume }: ResumeDocumentProps) {
         {skills && skills.length > 0 && (
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Skills</Text>
-            {skills.map((group) => (
-              <View key={group.name} style={styles.skillRow}>
-                <Text style={styles.skillCategory}>{group.name}: </Text>
-                <Text style={styles.skillKeywords}>
-                  {group.keywords?.join(", ")}
-                </Text>
-              </View>
-            ))}
+            <View style={styles.skillsGrid}>
+              {skills.map((group) => (
+                <View key={group.name} style={styles.skillColumn}>
+                  <Text style={styles.skillCategory}>{group.name}</Text>
+                  <Text style={styles.skillKeywords}>
+                    {group.keywords?.join(", ")}
+                  </Text>
+                </View>
+              ))}
+            </View>
           </View>
         )}
 
@@ -245,11 +284,7 @@ export default function ResumeDocument({ resume }: ResumeDocumentProps) {
                     {[edu.studyType, edu.area].filter(Boolean).join(", ")}
                   </Text>
                   <Text style={styles.dates}>
-                    <DateRange
-                      start={edu.startDate}
-                      end={edu.endDate}
-                      isEducation
-                    />
+                    {formatDateRange(edu.startDate, edu.endDate, true)}
                   </Text>
                 </View>
                 <Text style={styles.eduSchool}>{edu.institution}</Text>
@@ -265,7 +300,7 @@ export default function ResumeDocument({ resume }: ResumeDocumentProps) {
               <View key={`${cert.name}-${i}`} style={styles.certEntry}>
                 <View style={styles.entryRow}>
                   <Text style={styles.certName}>{cert.name}</Text>
-                  <Text style={styles.dates}>{cert.date}</Text>
+                  <Text style={styles.dates}>{formatDate(cert.date)}</Text>
                 </View>
                 {cert.issuer && (
                   <Text style={styles.certIssuer}>{cert.issuer}</Text>
@@ -278,7 +313,7 @@ export default function ResumeDocument({ resume }: ResumeDocumentProps) {
         <Text
           style={styles.footer}
           render={({ pageNumber, totalPages }) =>
-            `Page ${pageNumber} of ${totalPages}`
+            totalPages > 1 ? `Page ${pageNumber} of ${totalPages}` : ""
           }
           fixed
         />
