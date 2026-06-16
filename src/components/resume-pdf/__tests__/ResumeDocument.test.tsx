@@ -12,4 +12,13 @@ describe("ResumeDocument", () => {
     expect(buffer.length).toBeGreaterThan(0);
     expect(buffer.slice(0, 5).toString()).toBe("%PDF-");
   });
+
+  it("renders a compact PDF with limited highlights", async () => {
+    const buffer = await renderToBuffer(
+      <ResumeDocument resume={resume} maxHighlightsPerJob={4} />,
+    );
+    expect(buffer).toBeDefined();
+    expect(buffer.length).toBeGreaterThan(0);
+    expect(buffer.slice(0, 5).toString()).toBe("%PDF-");
+  });
 });
