@@ -14,7 +14,12 @@
   line-height: 1;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
   border-color: var(--primary);
   color: var(--text);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
