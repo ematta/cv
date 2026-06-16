@@ -23,33 +23,34 @@ const styles = StyleSheet.create({
     color: "#000000",
   },
   header: {
-    marginBottom: 14,
+    marginBottom: 16,
   },
   name: {
     fontSize: 20,
     fontWeight: "bold",
-    lineHeight: 1.15,
-    marginBottom: 4,
+    lineHeight: 1.2,
+    marginBottom: 6,
   },
   label: {
     fontSize: 11,
-    lineHeight: 1.2,
+    lineHeight: 1.3,
     color: "#333333",
     marginBottom: 6,
   },
   contact: {
     fontSize: 9,
-    lineHeight: 1.3,
+    lineHeight: 1.4,
     color: "#333333",
   },
   section: {
-    marginBottom: 9,
+    marginBottom: 10,
   },
   sectionTitle: {
     fontSize: 10.5,
     fontWeight: "bold",
     textTransform: "uppercase",
     letterSpacing: 1,
+    lineHeight: 1.3,
     borderBottomWidth: 1,
     borderBottomColor: "#000000",
     paddingBottom: 3,
@@ -61,13 +62,13 @@ const styles = StyleSheet.create({
     color: "#222222",
   },
   entry: {
-    marginBottom: 6,
+    marginBottom: 8,
   },
   entryRow: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "baseline",
-    marginBottom: 2,
+    marginBottom: 3,
   },
   entryTitle: {
     flex: 1,
@@ -76,25 +77,29 @@ const styles = StyleSheet.create({
   position: {
     fontWeight: "bold",
     fontSize: 10,
+    lineHeight: 1.3,
   },
   at: {
     fontSize: 9.5,
+    lineHeight: 1.3,
     color: "#555555",
   },
   company: {
     fontSize: 10,
+    lineHeight: 1.3,
   },
   dates: {
     fontSize: 9,
+    lineHeight: 1.3,
     color: "#555555",
     whiteSpace: "nowrap",
   },
   highlightsList: {
-    marginTop: 2,
+    marginTop: 3,
   },
   bullet: {
     flexDirection: "row",
-    marginBottom: 2,
+    marginBottom: 3,
   },
   bulletDot: {
     width: 7,
@@ -114,12 +119,13 @@ const styles = StyleSheet.create({
   },
   skillColumn: {
     width: "48%",
-    marginBottom: 7,
+    marginBottom: 8,
   },
   skillCategory: {
     fontWeight: "bold",
     fontSize: 9,
-    marginBottom: 1,
+    lineHeight: 1.3,
+    marginBottom: 2,
   },
   skillKeywords: {
     fontSize: 9,
@@ -127,28 +133,32 @@ const styles = StyleSheet.create({
     color: "#222222",
   },
   eduEntry: {
-    marginBottom: 5,
+    marginBottom: 6,
   },
   eduDegree: {
     fontWeight: "bold",
     fontSize: 10,
+    lineHeight: 1.3,
   },
   eduSchool: {
     fontSize: 9,
+    lineHeight: 1.3,
     color: "#333333",
-    marginTop: 1,
+    marginTop: 2,
   },
   certEntry: {
-    marginBottom: 4,
+    marginBottom: 5,
   },
   certName: {
     fontWeight: "bold",
     fontSize: 10,
+    lineHeight: 1.3,
   },
   certIssuer: {
     fontSize: 9,
+    lineHeight: 1.3,
     color: "#555555",
-    marginTop: 1,
+    marginTop: 2,
   },
   footer: {
     position: "absolute",
@@ -157,6 +167,7 @@ const styles = StyleSheet.create({
     right: PAGE_PADDING,
     textAlign: "center",
     fontSize: 8,
+    lineHeight: 1.3,
     color: "#777777",
   },
 });
