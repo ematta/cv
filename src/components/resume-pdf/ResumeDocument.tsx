@@ -22,20 +22,25 @@ const styles = StyleSheet.create({
     lineHeight: 1.35,
     color: "#000000",
   },
+  header: {
+    marginBottom: 14,
+  },
   name: {
     fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 3,
+    lineHeight: 1.15,
+    marginBottom: 4,
   },
   label: {
     fontSize: 11,
+    lineHeight: 1.2,
     color: "#333333",
     marginBottom: 6,
   },
   contact: {
     fontSize: 9,
+    lineHeight: 1.3,
     color: "#333333",
-    marginBottom: 14,
   },
   section: {
     marginBottom: 9,
@@ -196,9 +201,11 @@ export default function ResumeDocument({
   return (
     <Document>
       <Page size="LETTER" style={styles.page}>
-        <Text style={styles.name}>{basics.name}</Text>
-        <Text style={styles.label}>{basics.label}</Text>
-        <Text style={styles.contact}>{contact.join(" · ")}</Text>
+        <View style={styles.header}>
+          <Text style={styles.name}>{basics.name}</Text>
+          <Text style={styles.label}>{basics.label}</Text>
+          <Text style={styles.contact}>{contact.join(" · ")}</Text>
+        </View>
 
         {basics.summary && (
           <View style={styles.section}>
