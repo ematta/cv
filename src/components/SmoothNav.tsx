@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import PrintButton from "./PrintButton";
 import styles from "./SmoothNav.module.css";
-import ThemeToggle from "./ThemeToggle";
+import ThemeSelector from "./ThemeSelector";
 
 interface NavSection {
   id: string;
@@ -54,7 +54,7 @@ export default function SmoothNav({ sections }: SmoothNavProps) {
 
   return (
     <nav className={`${styles.nav} no-print`}>
-      <ThemeToggle />
+      <ThemeSelector />
       <ul className={styles.links}>
         {sections.map((s) => (
           <li key={s.id}>

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { EB_Garamond, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +9,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const ebGaramond = EB_Garamond({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
@@ -33,7 +38,7 @@ export const viewport: Viewport = {
   ],
 };
 
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})()`;
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',t||'terminal')}catch(e){}})()`;
 
 export default function RootLayout({
   children,
@@ -43,8 +48,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      data-theme="light"
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      data-theme="terminal"
+      className={`${geistSans.variable} ${geistMono.variable} ${ebGaramond.variable}`}
       suppressHydrationWarning
     >
       <head>
