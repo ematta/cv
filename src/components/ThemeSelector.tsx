@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./ThemeSelector.module.css";
 
 const THEMES = [
@@ -11,12 +11,11 @@ const THEMES = [
 ] as const;
 
 export default function ThemeSelector() {
-  const [theme, setTheme] = useState<string>("terminal");
-
-  useEffect(() => {
-    const stored = document.documentElement.getAttribute("data-theme");
-    if (stored) setTheme(stored);
-  }, []);
+  const [theme, setTheme] = useState<string>(() =>
+    typeof document !== "undefined"
+      ? (document.documentElement.getAttribute("data-theme") ?? "terminal")
+      : "terminal",
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const next = e.target.value;

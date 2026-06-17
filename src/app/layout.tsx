@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 const ebGaramond = EB_Garamond({
-  variable: "--font-geist-serif",
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
