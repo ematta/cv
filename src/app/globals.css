@@ -16,6 +16,8 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
   --max-width: 960px;
   --transition: 0.2s ease;
+  --font-body: var(--font-geist-sans);
+  --text-glow: none;
 }
 
 [data-theme="dark"] {
@@ -34,6 +36,82 @@
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+[data-theme="papyrus"] {
+  --bg: #f3ecd8;
+  --bg-secondary: #e8dfc4;
+  --surface: #faf6ea;
+  --text: #3d2b1f;
+  --text-secondary: #6b5340;
+  --primary: #8b4513;
+  --primary-strong: #6b3410;
+  --accent: #b8860b;
+  --border: #d4c5a9;
+  --nav-bg: rgba(243, 236, 216, 0.9);
+  --nav-border: #d4c5a9;
+  --shadow: 0 1px 3px rgba(139, 69, 19, 0.1);
+  --shadow-md: 0 4px 12px rgba(139, 69, 19, 0.12);
+  --font-body: var(--font-geist-serif);
+}
+
+[data-theme="terminal"] {
+  --bg: #0d0d0d;
+  --bg-secondary: #1a1a1a;
+  --surface: #141414;
+  --text: #00ff41;
+  --text-secondary: #00cc33;
+  --primary: #00ff41;
+  --primary-strong: #00cc33;
+  --accent: #ffb000;
+  --border: #2a2a2a;
+  --nav-bg: rgba(13, 13, 13, 0.92);
+  --nav-border: #2a2a2a;
+  --shadow: none;
+  --shadow-md: none;
+  --radius: 0px;
+  --radius-lg: 0px;
+  --font-body: var(--font-geist-mono);
+  --text-glow: 0 0 2px rgba(0, 255, 65, 0.3);
+}
+
+[data-theme="terminal"] body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+}
+
+[data-theme="terminal"] body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  animation: terminalFlicker 0.15s infinite;
+}
+
+@keyframes terminalFlicker {
+  0%,
+  100% {
+    opacity: 0.97;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -49,7 +127,8 @@ html {
 }
 
 body {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-body);
+  text-shadow: var(--text-glow);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -115,6 +194,10 @@ ul {
     transition-duration: 0.01ms !important;
   }
 
+  [data-theme="terminal"] body::after {
+    animation: none;
+  }
+
   html {
     scroll-behavior: auto;
   }
@@ -135,6 +218,13 @@ ul {
     --surface: #fff;
     --bg: #fff;
     --accent: #b08300;
+    --font-body: var(--font-geist-sans);
+    --text-glow: none;
+  }
+
+  [data-theme="terminal"] body::before,
+  [data-theme="terminal"] body::after {
+    display: none;
   }
 
   .no-print {
