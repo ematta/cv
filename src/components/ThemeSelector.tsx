@@ -11,7 +11,7 @@ const THEMES = [
 ] as const;
 
 export default function ThemeSelector() {
-  const [theme, setTheme] = useState<string>("light");
+  const [theme, setTheme] = useState<string>("terminal");
 
   useEffect(() => {
     const stored = document.documentElement.getAttribute("data-theme");
