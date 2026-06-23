@@ -6,9 +6,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const pdf = await renderToBuffer(
-    <ResumeDocument resume={resume} maxHighlightsPerJob={4} />,
-  );
+  const pdf = await renderToBuffer(<ResumeDocument resume={resume} />);
   const body = new Uint8Array(pdf);
 
   return new Response(body, {
