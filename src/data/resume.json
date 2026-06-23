@@ -51,7 +51,7 @@
         "Led migration of 120 Puppeteer tests to Playwright, reducing pipeline failures by over 50% and establishing a modern, maintainable test foundation for the team.",
         "Transitioned team workflow from Kanban to Agile Sprint, resulting in a 75% improvement in time to completion and greater alignment with cross-functional delivery expectations.",
         "Spearheaded refactoring of a flaky Jenkins pipeline, improving CI reliability and removing a recurring source of developer friction.",
-        "Developed comprehensive load testing strategy utilizing Artillery, Playwright, and Fargate/EC2 Container technologies."
+        "Developed comprehensive load testing strategy utilizing Artillery, Playwright, and AWS Fargate/EC2 Container technologies."
       ],
       "location": "Remote"
     },
@@ -78,7 +78,8 @@
         "Fostered a quality-centric engineering culture through coaching, cross-team education on modern testing principles, and introduction of a bug bash process for two major platform releases.",
         "Developed an end-to-end test framework in Node.js and Playwright, integrated into the CI pipeline via docker-compose, reducing failure rates by 15%.",
         "Established a mobile E2E framework using Node.js and Detox for React Native, covering both Android and iOS build targets.",
-        "Implemented On-Call rotation using Datadog and PagerDuty integration and standardized the Root Cause Analysis process for engineering postmortems."
+        "Implemented On-Call rotation using Datadog and PagerDuty integration and standardized the Root Cause Analysis process for engineering postmortems.",
+        "Built and validated cloud-based test and staging infrastructure across AWS and GCP, supporting reliable CI execution and environment parity."
       ],
       "location": "Remote"
     },
@@ -89,7 +90,8 @@
       "endDate": "2020-05",
       "highlights": [
         "Drove adoption of quality best practices across cross-functional teams by contributing to integration and functional test frameworks and encouraging QA engagement in GitHub pull request workflows.",
-        "Delivered test frameworks in Node.js/Webdriver.io, Python, and Scala targeting billing infrastructure and microservices, integrated with Jenkins CI and reporting to Elasticsearch/Kibana."
+        "Delivered test frameworks in Node.js/Webdriver.io, Python, and Scala targeting billing infrastructure and microservices, integrated with Jenkins CI and reporting to Elasticsearch/Kibana.",
+        "Operated across AWS and GCP environments, validating cloud deployments alongside integration and functional test frameworks for billing infrastructure and microservices."
       ],
       "location": "Remote"
     },
@@ -237,6 +239,8 @@
       "name": "Platforms & Tools",
       "level": "Intermediate",
       "keywords": [
+        "AWS",
+        "GCP",
         "Jira",
         "Datadog",
         "PagerDuty",
