@@ -102,7 +102,7 @@
       "startDate": "2017-01",
       "endDate": "2017-12",
       "highlights": [
-        "Delivered API and UI test frameworks in Python (pytest, Selenium, SwaggerApi) for Next-Generation Antivirus cloud endpoints; mentored QA team members in adopting testing tools within their respective scrum teams.",
+        "Delivered API test frameworks in Python (pytest, SwaggerApi) for Next-Generation Antivirus cloud endpoints; mentored QA team members in adopting testing tools within their respective scrum teams.",
         "Developed and documented a UI test framework in Python using behave, BrowserMob proxy, and Selenium to test the Customer Portal, executed against a Selenium Docker container within a Jenkins worker node."
       ],
       "location": "Remote"
