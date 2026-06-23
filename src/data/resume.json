@@ -91,7 +91,8 @@
       "highlights": [
         "Drove adoption of quality best practices across cross-functional teams by contributing to integration and functional test frameworks and encouraging QA engagement in GitHub pull request workflows.",
         "Delivered test frameworks in Node.js/Webdriver.io, Python, and Scala targeting billing infrastructure and microservices, integrated with Jenkins CI and reporting to Elasticsearch/Kibana.",
-        "Operated across AWS and GCP environments, validating cloud deployments alongside integration and functional test frameworks for billing infrastructure and microservices."
+        "Operated across AWS and GCP environments, validating cloud deployments alongside integration and functional test frameworks for billing infrastructure and microservices.",
+        "Built integration points in the QA environment for Recurly, Heroku, and other internal services using Ansible and Terraform, enabling more robust integration point testing through end-to-end frameworks."
       ],
       "location": "Remote"
     },
@@ -101,17 +102,31 @@
       "startDate": "2017-01",
       "endDate": "2017-12",
       "highlights": [
-        "Delivered API and UI test frameworks in Python (pytest, Selenium, SwaggerApi) for Next-Generation Antivirus cloud endpoints; mentored QA team members in adopting testing tools within their respective scrum teams."
+        "Delivered API and UI test frameworks in Python (pytest, Selenium, SwaggerApi) for Next-Generation Antivirus cloud endpoints; mentored QA team members in adopting testing tools within their respective scrum teams.",
+        "Developed and documented a UI test framework in Python using behave, BrowserMob proxy, and Selenium to test the Customer Portal, executed against a Selenium Docker container within a Jenkins worker node."
       ],
       "location": "Remote"
     },
     {
       "name": "Rackspace",
-      "position": "Software Developer II / SDET II",
-      "startDate": "2014-11",
-      "endDate": "2017-12",
+      "position": "Software Developer II",
+      "startDate": "2016-01",
+      "endDate": "2017-01",
       "highlights": [
-        "Led and mentored QA engineers in automation best practices, contributed to cross-team frameworks, and architected RESTful applications in Python and Flask alongside QA load testing initiatives using Gatling."
+        "Developed on a legacy Python 2.7 application with an ExtJS frontend and PostgreSQL database, introducing unit tests written with pytest and MagicMock and adding flake8/pep8 static code analysis via GitHub commit hooks.",
+        "Architected and developed a RESTful application in Python 3, Flask, and SQLAlchemy (including automated testing and static code analysis) to replace a Rails 2.0 service that was out of PCI compliance."
+      ],
+      "location": "San Antonio, TX"
+    },
+    {
+      "name": "Rackspace",
+      "position": "Software Development Engineer in Test II",
+      "startDate": "2014-11",
+      "endDate": "2016-01",
+      "highlights": [
+        "Led and mentored QA engineers in automation best practices, contributed to cross-team frameworks, and architected RESTful applications in Python and Flask alongside QA load testing initiatives using Gatling.",
+        "Developed and documented a UI test framework in Ruby, Merlot (in-house Selenium), and Cucumber to test the Sales and Contract portal, executed against a Selenium Grid in Jenkins with JUnit results reported to Slack; a major re-write of the original Ruby tooling that included browser performance metrics for page loading and RESTful calls.",
+        "Developed and documented a load test framework in Gatling (Scala) to test the Sales and Contract portal UI and APIs, reporting findings through command-line output and visualization charts."
       ],
       "location": "San Antonio, TX"
     },
@@ -122,7 +137,8 @@
       "endDate": "2014-11",
       "highlights": [
         "Orchestrated the creation of the QA Automation department from the ground up, introduced Agile Kanban methodology, and supervised two Software Development Engineers in Test.",
-        "Developed a UI test framework in Ruby, WATIR, and Cucumber for Insurance and Underwriting portals, and engineered QA tooling including SQL/HTML/Excel/PDF comparison utilities and JMeter load tests with d3 visualization reports."
+        "Developed a UI test framework in Ruby, WATIR, and Cucumber for Insurance and Underwriting portals, and engineered QA tooling including SQL/HTML/Excel/PDF comparison utilities and JMeter load tests with d3 visualization reports.",
+        "Built an in-house Continuous Integration server hosting a Sinatra/Slim web application where manual QA engineers could upload Gherkin scripts to validate insurance policies."
       ],
       "location": "Pinellas Park, FL"
     }
@@ -204,7 +220,10 @@
         "Python",
         "MCP Server Development",
         "API Architecture",
-        "Microservices"
+        "Microservices",
+        "Flask",
+        "SQLAlchemy",
+        "PostgreSQL"
       ]
     },
     {
@@ -219,7 +238,9 @@
         "Puppeteer",
         "Jest",
         "pytest",
-        "Gatling"
+        "Gatling",
+        "Allure",
+        "behave"
       ]
     },
     {
