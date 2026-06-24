@@ -272,8 +272,8 @@
         "PagerDuty",
         "SonarCloud",
         "Elasticsearch/Kibana",
-        "Ruby",
-        "Scala"
+        "Next.js",
+        "React"
       ]
     }
   ],
