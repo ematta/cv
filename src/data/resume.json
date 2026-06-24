@@ -5,11 +5,11 @@
     "image": "",
     "email": "enrique.j.matta@gmail.com",
     "phone": "210-570-6667",
-    "url": "https://ematta.dev",
+    "url": "https://matta.dev",
     "summary": "Software Engineering Manager and working manager spending approximately 50% of time in direct technical contribution \u2014 including production feature development, API architecture, MCP server development, CI/CD pipeline ownership, and code reviews. Proven track record of building high-performing teams, navigating organizational change, and delivering quality-driven engineering programs at scale. Led teams of up to 10 engineers spanning full-time staff and contractors across onshore and offshore models. Brings 14+ years of progressive engineering experience spanning production software development, QA automation, and platform infrastructure. Currently pursuing a Master of Science in Organizational Leadership.",
     "location": {
-      "address": "",
-      "postalCode": "",
+      "address": "3563 Summer Mdw",
+      "postalCode": "78222",
       "city": "San Antonio",
       "countryCode": "US",
       "region": "Texas"
@@ -19,6 +19,11 @@
         "network": "GitHub",
         "username": "ematta",
         "url": "https://github.com/ematta"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "enriquematta",
+        "url": "https://linkedin.com/in/enriquematta"
       }
     ]
   },
@@ -152,7 +157,7 @@
     },
     {
       "institution": "Webster University",
-      "area": "",
+      "area": "Business Administration",
       "studyType": "Master of Business Administration",
       "startDate": "2016",
       "endDate": "2019"
@@ -273,8 +278,8 @@
     }
   ],
   "meta": {
-    "canonical": "https://ematta.dev",
+    "canonical": "https://cv.matta.dev",
     "version": "v1.0.0",
-    "lastModified": "2026-06-15"
+    "lastModified": "2026-06-24"
   }
 }
