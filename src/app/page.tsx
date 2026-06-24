@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import SkillsGrid from "@/components/SkillsGrid";
 import SmoothNav from "@/components/SmoothNav";
 import Timeline from "@/components/Timeline";
@@ -8,6 +9,7 @@ import styles from "./page.module.css";
 
 const NAV_SECTIONS = [
   { id: "experience", label: "Experience" },
+  { id: "projects", label: "Projects" },
   { id: "skills", label: "Skills" },
   { id: "education", label: "Education" },
   { id: "certifications", label: "Certifications" },
@@ -27,6 +29,14 @@ export default function Home() {
             <span className={styles.sectionTitleAccent} />
           </h2>
           <Timeline jobs={resume.work ?? []} />
+        </section>
+
+        <section id="projects" className={styles.section}>
+          <h2 className={styles.sectionTitle}>
+            Projects
+            <span className={styles.sectionTitleAccent} />
+          </h2>
+          <Projects projects={resume.projects ?? []} />
         </section>
 
         <section id="skills" className={styles.section}>

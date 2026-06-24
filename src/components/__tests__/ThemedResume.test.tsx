@@ -15,6 +15,7 @@ describe("ThemedResume", () => {
     const sections = [
       "Summary",
       "Experience",
+      "Projects",
       "Skills",
       "Education",
       "Certifications",

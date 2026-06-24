@@ -61,6 +61,13 @@ const styles = StyleSheet.create({
     lineHeight: 1.45,
     color: "#222222",
   },
+  projectDescription: {
+    fontSize: 9,
+    lineHeight: 1.4,
+    color: "#444444",
+    marginTop: 2,
+    marginBottom: 2,
+  },
   entry: {
     marginBottom: 8,
   },
@@ -193,7 +200,7 @@ export default function ResumeDocument({
   resume,
   maxHighlightsPerJob = Number.POSITIVE_INFINITY,
 }: ResumeDocumentProps) {
-  const { basics, work, skills, education, certificates } = resume;
+  const { basics, work, projects, skills, education, certificates } = resume;
 
   const location = [basics.location?.city, basics.location?.region]
     .filter(Boolean)
@@ -246,6 +253,45 @@ export default function ResumeDocument({
                 {job.highlights && job.highlights.length > 0 && (
                   <View style={styles.highlightsList}>
                     {job.highlights.map((h) => (
+                      <View key={h.slice(0, 60)} style={styles.bullet}>
+                        <Text style={styles.bulletDot}>{"\u2022"}</Text>
+                        <Text style={styles.bulletText}>{h}</Text>
+                      </View>
+                    ))}
+                  </View>
+                )}
+              </View>
+            ))}
+          </View>
+        )}
+
+        {projects && projects.length > 0 && (
+          <View style={styles.section} wrap={false}>
+            <Text style={styles.sectionTitle}>Projects</Text>
+            {projects.map((project, i) => (
+              <View key={`${project.name}-${i}`} style={styles.entry}>
+                <View style={styles.entryRow}>
+                  <Text style={styles.entryTitle}>
+                    <Text style={styles.position}>{project.name}</Text>
+                    {project.entity && (
+                      <>
+                        <Text style={styles.at}> at </Text>
+                        <Text style={styles.company}>{project.entity}</Text>
+                      </>
+                    )}
+                  </Text>
+                  <Text style={styles.dates}>
+                    {formatDateRange(project.startDate, project.endDate)}
+                  </Text>
+                </View>
+                {project.description && (
+                  <Text style={styles.projectDescription}>
+                    {project.description}
+                  </Text>
+                )}
+                {project.highlights && project.highlights.length > 0 && (
+                  <View style={styles.highlightsList}>
+                    {project.highlights.map((h) => (
                       <View key={h.slice(0, 60)} style={styles.bullet}>
                         <Text style={styles.bulletDot}>{"\u2022"}</Text>
                         <Text style={styles.bulletText}>{h}</Text>

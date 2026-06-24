@@ -5,11 +5,11 @@
     "image": "",
     "email": "enrique.j.matta@gmail.com",
     "phone": "210-570-6667",
-    "url": "https://ematta.dev",
+    "url": "https://matta.dev",
     "summary": "Software Engineering Manager and working manager spending approximately 50% of time in direct technical contribution \u2014 including production feature development, API architecture, MCP server development, CI/CD pipeline ownership, and code reviews. Proven track record of building high-performing teams, navigating organizational change, and delivering quality-driven engineering programs at scale. Led teams of up to 10 engineers spanning full-time staff and contractors across onshore and offshore models. Brings 14+ years of progressive engineering experience spanning production software development, QA automation, and platform infrastructure. Currently pursuing a Master of Science in Organizational Leadership.",
     "location": {
-      "address": "",
-      "postalCode": "",
+      "address": "3563 Summer Mdw",
+      "postalCode": "78222",
       "city": "San Antonio",
       "countryCode": "US",
       "region": "Texas"
@@ -19,6 +19,11 @@
         "network": "GitHub",
         "username": "ematta",
         "url": "https://github.com/ematta"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "enriquematta",
+        "url": "https://linkedin.com/in/enriquematta"
       }
     ]
   },
@@ -152,7 +157,7 @@
     },
     {
       "institution": "Webster University",
-      "area": "",
+      "area": "Business Administration",
       "studyType": "Master of Business Administration",
       "startDate": "2016",
       "endDate": "2019"
@@ -272,9 +277,114 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "Contributor API MCP Server",
+      "description": "A Model Context Protocol (MCP) server built as a shim in front of the Shutterstock Contributor API layer, enabling AI tooling to interact with backend upload workflows and embedding AI capabilities directly into engineering processes.",
+      "highlights": [
+        "Architected and delivered the MCP integration from the ground up, exposing contributor upload/submission workflows to internal AI consumers.",
+        "Enabled downstream AI tooling to invoke backend workflows programmatically, accelerating experimentation and automation across the contributor platform."
+      ],
+      "keywords": [
+        "MCP",
+        "AI Tooling",
+        "API Architecture",
+        "Integration Layer"
+      ],
+      "startDate": "2024-04",
+      "entity": "Shutterstock",
+      "roles": ["Architect", "Lead"],
+      "type": "application"
+    },
+    {
+      "name": "Contributor Platform REST to GraphQL Migration",
+      "description": "Hands-on migration of the Shutterstock Contributor platform's core APIs from REST to GraphQL \u2014 the system responsible for all contributor content ingestion and submission workflows.",
+      "highlights": [
+        "Replaced legacy REST endpoints with a GraphQL schema, improving query efficiency and reducing over-fetching for downstream consumers.",
+        "Modernized the integration layer to support more flexible client querying and future feature development."
+      ],
+      "keywords": [
+        "GraphQL",
+        "REST API Design",
+        "API Architecture",
+        "Microservices"
+      ],
+      "startDate": "2024-04",
+      "entity": "Shutterstock",
+      "roles": ["Lead Engineer"],
+      "type": "application"
+    },
+    {
+      "name": "Facial Detection and Release Form Similarity",
+      "description": "Client-side facial detection model work and delivery of Release Form Similarity \u2014 both shipped to production on the Shutterstock Contributor platform.",
+      "highlights": [
+        "Led client-side facial detection implementation, improving ingestion quality and reducing reviewer kickbacks.",
+        "Managed end-to-end delivery of Release Form Similarity, shortening asset approval time."
+      ],
+      "keywords": ["Client-Side ML", "Image Processing", "Production Delivery"],
+      "startDate": "2024-04",
+      "entity": "Shutterstock",
+      "roles": ["Technical Lead"],
+      "type": "application"
+    },
+    {
+      "name": "Test Foundation Modernization: Puppeteer to Playwright",
+      "description": "Migration of 120 Puppeteer tests to Playwright across the contributor and review platform pipelines.",
+      "highlights": [
+        "Reduced pipeline failures by over 50%, removing a recurring source of developer friction.",
+        "Established a modern, maintainable test foundation for the team going forward."
+      ],
+      "keywords": ["Playwright", "Puppeteer", "Test Automation", "CI/CD"],
+      "startDate": "2022-07",
+      "endDate": "2024-05",
+      "entity": "Shutterstock",
+      "roles": ["Lead Engineer"],
+      "type": "application"
+    },
+    {
+      "name": "Daily Release Pipeline",
+      "description": "CI/CD pipeline enabling daily releases via GitHub Actions, with post-release acceptance test validation backed by a Cypress end-to-end framework.",
+      "highlights": [
+        "Implemented daily releases via GitHub Actions with post-release acceptance test validations, achieving a 20% improvement in Mean Time to Recovery.",
+        "Built a Cypress end-to-end test framework to underpin release confidence for the daily cadence."
+      ],
+      "keywords": [
+        "GitHub Actions",
+        "CI/CD",
+        "Cypress",
+        "MTTR",
+        "Release Engineering"
+      ],
+      "startDate": "2021-11",
+      "endDate": "2022-06",
+      "entity": "Grid.ai",
+      "roles": ["Lead Engineer"],
+      "type": "application"
+    },
+    {
+      "name": "PCI-Compliant Service Replacement",
+      "description": "Architected and developed a RESTful application in Python 3, Flask, and SQLAlchemy to replace a legacy Rails 2.0 service that had fallen out of PCI compliance.",
+      "highlights": [
+        "Replaced an out-of-compliance Rails 2.0 service with a new Python 3, Flask, and SQLAlchemy stack, restoring PCI compliance for the affected workflows.",
+        "Built in automated testing and static code analysis from the start, establishing a maintainable foundation for ongoing development."
+      ],
+      "keywords": [
+        "Python 3",
+        "Flask",
+        "SQLAlchemy",
+        "PCI Compliance",
+        "REST API Design"
+      ],
+      "startDate": "2016-01",
+      "endDate": "2017-01",
+      "entity": "Rackspace",
+      "roles": ["Architect", "Lead Engineer"],
+      "type": "application"
+    }
+  ],
   "meta": {
-    "canonical": "https://ematta.dev",
+    "canonical": "https://cv.matta.dev",
     "version": "v1.0.0",
-    "lastModified": "2026-06-15"
+    "lastModified": "2026-06-24"
   }
 }

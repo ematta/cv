@@ -127,6 +127,26 @@
   color: #555;
 }
 
+.projectRoles {
+  font-size: 0.83rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.projectDescription {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #333;
+  margin: 0.15rem 0 0.3rem;
+}
+
+.projectKeywords {
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
 @media print {
   .page {
     padding: 0.5in;
