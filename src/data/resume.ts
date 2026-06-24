@@ -57,12 +57,26 @@ export interface JsonResumeCertificate {
   url?: string;
 }
 
+export interface JsonResumeProject {
+  name: string;
+  description?: string;
+  highlights?: string[];
+  keywords?: string[];
+  startDate?: string;
+  endDate?: string;
+  url?: string;
+  roles?: string[];
+  entity?: string;
+  type?: string;
+}
+
 export interface JsonResume {
   basics: JsonResumeBasics;
   work?: JsonResumeWork[];
   education?: JsonResumeEducation[];
   certificates?: JsonResumeCertificate[];
   skills?: JsonResumeSkill[];
+  projects?: JsonResumeProject[];
 }
 
 export const resume = resumeData as JsonResume;

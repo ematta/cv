@@ -277,6 +277,71 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "Contributor API MCP Server",
+      "description": "A Model Context Protocol (MCP) server built as a shim in front of the Shutterstock Contributor API layer, enabling AI tooling to interact with backend upload workflows and embedding AI capabilities directly into engineering processes.",
+      "highlights": [
+        "Architected and delivered the MCP integration from the ground up, exposing contributor upload/submission workflows to internal AI consumers.",
+        "Enabled downstream AI tooling to invoke backend workflows programmatically, accelerating experimentation and automation across the contributor platform."
+      ],
+      "keywords": [
+        "MCP",
+        "AI Tooling",
+        "API Architecture",
+        "Integration Layer"
+      ],
+      "startDate": "2024-04",
+      "entity": "Shutterstock",
+      "roles": ["Architect", "Lead"],
+      "type": "application"
+    },
+    {
+      "name": "Contributor Platform REST to GraphQL Migration",
+      "description": "Hands-on migration of the Shutterstock Contributor platform's core APIs from REST to GraphQL \u2014 the system responsible for all contributor content ingestion and submission workflows.",
+      "highlights": [
+        "Replaced legacy REST endpoints with a GraphQL schema, improving query efficiency and reducing over-fetching for downstream consumers.",
+        "Modernized the integration layer to support more flexible client querying and future feature development."
+      ],
+      "keywords": [
+        "GraphQL",
+        "REST API Design",
+        "API Architecture",
+        "Microservices"
+      ],
+      "startDate": "2024-04",
+      "entity": "Shutterstock",
+      "roles": ["Lead Engineer"],
+      "type": "application"
+    },
+    {
+      "name": "Facial Detection and Release Form Similarity",
+      "description": "Client-side facial detection model work and delivery of Release Form Similarity \u2014 both shipped to production on the Shutterstock Contributor platform.",
+      "highlights": [
+        "Led client-side facial detection implementation, improving ingestion quality and reducing reviewer kickbacks.",
+        "Managed end-to-end delivery of Release Form Similarity, shortening asset approval time."
+      ],
+      "keywords": ["Client-Side ML", "Image Processing", "Production Delivery"],
+      "startDate": "2024-04",
+      "entity": "Shutterstock",
+      "roles": ["Technical Lead"],
+      "type": "application"
+    },
+    {
+      "name": "Test Foundation Modernization: Puppeteer to Playwright",
+      "description": "Migration of 120 Puppeteer tests to Playwright across the contributor and review platform pipelines.",
+      "highlights": [
+        "Reduced pipeline failures by over 50%, removing a recurring source of developer friction.",
+        "Established a modern, maintainable test foundation for the team going forward."
+      ],
+      "keywords": ["Playwright", "Puppeteer", "Test Automation", "CI/CD"],
+      "startDate": "2022-07",
+      "endDate": "2024-05",
+      "entity": "Shutterstock",
+      "roles": ["Lead Engineer"],
+      "type": "application"
+    }
+  ],
   "meta": {
     "canonical": "https://cv.matta.dev",
     "version": "v1.0.0",
