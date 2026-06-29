@@ -33,12 +33,12 @@
       "position": "Manager, Software Development",
       "startDate": "2024-04",
       "highlights": [
-        "Serve as a working manager, spending  50% of time in direct technical contribution - including production feature development, API architecture, code reviews, and CI/CD pipeline ownership - alongside full people management responsibilities for a team of up to 10 engineers (4 FTE, 6 contractors), with regular one-on-ones, performance reviews, and career development conversations supporting individual growth and team retention.",
+        "Working manager: 50% technical contribution (feature dev, API architecture, code reviews, CI/CD pipeline ownership) plus full people management for a team of 10 (4 FTE, 6 contractors) — including one-on-ones, performance reviews, and career development for growth and retention.",
         "Led weekly roadmap sessions with product and cross‑functional stakeholders, aligning delivery with business goals and launching QA policies that boosted test efficiency by 15%.",
         "Optimized infrastructure costs by retiring unused projects and migrating workloads to AWS Lambda, cutting resource usage by 10%.",
         "Architected and delivered an MCP (Model Context Protocol) server as a shim in front of the contributor API layer, enabling AI tooling to interact with backend upload workflows and integrating AI capabilities directly into engineering processes.",
         "Delivered client‑side facial detection and Release Form Similarity features, improving ingestion quality and cutting asset approval time.",
-        "Merged two distinct engineering teams (Contributor Apps and Review Apps) into a single cohesive cross-functional unit and guided the organization through two company-wide restructuring events, driving knowledge cross-pollination, eliminating delivery silos, and preserving team continuity, stability, and morale through every transition.",
+        "Merged Contributor Apps and Review Apps into one cross-functional team and guided the org through two company-wide restructurings - driving knowledge cross-pollination, eliminating delivery silos, and preserving team continuity, stability, and morale throughout.",
         "Leading strategic planning for a long-term content unification initiative across all Shutterstock brands, designed to significantly elevate customer experience through a cohesive content catalog while enabling streamlined marketplace management for contributors.",
         "Achieved 100% of OKR targets by delivering multiple releases daily through automated testing, maintaining a 99% (two nines) availability SLO with average restoration under 5 minutes, a sub-15-minute CI pipeline SLA, and averaging fewer than one on-call error per quarter."
       ],
