@@ -6,7 +6,7 @@
     "email": "enrique.j.matta@gmail.com",
     "phone": "210-570-6667",
     "url": "https://matta.dev",
-    "summary": "Software Engineering Manager and working manager spending approximately 50% of time in direct technical contribution \u2014 including production feature development, API architecture, MCP server development, CI/CD pipeline ownership, and code reviews. Proven track record of building high-performing teams, navigating organizational change, and delivering quality-driven engineering programs at scale. Led teams of up to 10 engineers spanning full-time staff and contractors across onshore and offshore models. Brings 14+ years of progressive engineering experience spanning production software development, QA automation, and platform infrastructure. Currently pursuing a Master of Science in Organizational Leadership.",
+    "summary": "Software Engineering Manager and working manager spending approximately 50% of time in direct technical contribution - including production feature development, API architecture, MCP server development, CI/CD pipeline ownership, and code reviews. Proven track record of building high-performing teams, navigating organizational change, and delivering quality-driven engineering programs at scale. Led teams of up to 10 engineers spanning full-time staff and contractors across onshore and offshore models. Brings 14+ years of progressive engineering experience spanning production software development, QA automation, and platform infrastructure. Currently pursuing a Master of Science in Organizational Leadership.",
     "location": {
       "address": "3563 Summer Mdw",
       "postalCode": "78222",
@@ -33,16 +33,16 @@
       "position": "Manager, Software Development",
       "startDate": "2024-04",
       "highlights": [
-        "Serve as a working manager, spending approximately 50% of time in direct technical contribution \u2014 including production feature development, API architecture, code reviews, and CI/CD pipeline ownership \u2014 alongside full people management responsibilities for a team of up to 10 engineers (4 FTE, 6 contractors).",
-        "Led production engineering work on Shutterstock\u2019s Contributor platform \u2014 responsible for all contributor content ingestion and submission workflows \u2014 including a hands-on migration of core APIs from REST to GraphQL, improving query efficiency, reducing over-fetching, and modernizing the integration layer for downstream consumers.",
+        "Serve as a working manager, spending approximately 50% of time in direct technical contribution - including production feature development, API architecture, code reviews, and CI/CD pipeline ownership - alongside full people management responsibilities for a team of up to 10 engineers (4 FTE, 6 contractors).",
+        "Owned weekly roadmap planning sessions with the product team and cross-functional stakeholders, continuously reviewing roadmap health, retiring completed items, and incorporating new priorities to keep engineering delivery aligned with evolving business needs.",
         "Architected and delivered an MCP (Model Context Protocol) server as a shim in front of the contributor API layer, enabling AI tooling to interact with backend upload workflows and integrating AI capabilities directly into engineering processes.",
         "Led client-side facial detection model work and managed delivery of Release Form Similarity, both shipped to production; improvements scaled ingestion quality, reduced reviewer kickbacks, and shortened asset approval time.",
-        "Owned and maintained all CI pipeline infrastructure for the team, ensuring reliability, performance, and developer productivity across continuous integration workflows.",
         "Led people management including regular one-on-ones, performance reviews, and career development conversations to support individual growth and team retention.",
         "Merged two distinct engineering teams (Contributor Apps and Review Apps) into a single cohesive cross-functional unit, driving knowledge cross-pollination, eliminating delivery silos, and maintaining team stability through the transition.",
         "Guided the organization through two company-wide restructuring events while preserving team continuity and morale.",
         "Drove methodology change from Agile Sprint to Shape Up, improving project scoping discipline and delivery predictability.",
-        "Partnered with cross-functional stakeholders to implement company-wide QA policies and enablement programs, improving test efficiency by 15% across teams."
+        "Partnered with cross-functional stakeholders to implement company-wide QA policies and enablement programs, improving test efficiency by 15% across teams.",
+        "We met all OKR targets by delivering multiple releases daily through automated testing, slashing MTTR to under 5 minutes, maintaining a sub-15-minute CI pipeline SLA, and averaging fewer than one on-call error per quarter."
       ],
       "location": "Remote"
     },
@@ -298,7 +298,7 @@
     },
     {
       "name": "Contributor Platform REST to GraphQL Migration",
-      "description": "Hands-on migration of the Shutterstock Contributor platform's core APIs from REST to GraphQL \u2014 the system responsible for all contributor content ingestion and submission workflows.",
+      "description": "Hands-on migration of the Shutterstock Contributor platform's core APIs from REST to GraphQL - the system responsible for all contributor content ingestion and submission workflows.",
       "highlights": [
         "Replaced legacy REST endpoints with a GraphQL schema, improving query efficiency and reducing over-fetching for downstream consumers.",
         "Modernized the integration layer to support more flexible client querying and future feature development."
@@ -316,7 +316,7 @@
     },
     {
       "name": "Facial Detection and Release Form Similarity",
-      "description": "Client-side facial detection model work and delivery of Release Form Similarity \u2014 both shipped to production on the Shutterstock Contributor platform.",
+      "description": "Client-side facial detection model work and delivery of Release Form Similarity - both shipped to production on the Shutterstock Contributor platform.",
       "highlights": [
         "Led client-side facial detection implementation, improving ingestion quality and reducing reviewer kickbacks.",
         "Managed end-to-end delivery of Release Form Similarity, shortening asset approval time."
