@@ -33,16 +33,14 @@
       "position": "Manager, Software Development",
       "startDate": "2024-04",
       "highlights": [
-        "Serve as a working manager, spending approximately 50% of time in direct technical contribution - including production feature development, API architecture, code reviews, and CI/CD pipeline ownership - alongside full people management responsibilities for a team of up to 10 engineers (4 FTE, 6 contractors).",
-        "Owned weekly roadmap planning sessions with the product team and cross-functional stakeholders, continuously reviewing roadmap health, retiring completed items, and incorporating new priorities to keep engineering delivery aligned with evolving business needs.",
+        "Serve as a working manager, spending  50% of time in direct technical contribution - including production feature development, API architecture, code reviews, and CI/CD pipeline ownership - alongside full people management responsibilities for a team of up to 10 engineers (4 FTE, 6 contractors), with regular one-on-ones, performance reviews, and career development conversations supporting individual growth and team retention.",
+        "Led weekly roadmap sessions with product and cross‑functional stakeholders, aligning delivery with business goals and launching QA policies that boosted test efficiency by 15%.",
+        "Optimized infrastructure costs by retiring unused projects and migrating workloads to AWS Lambda, cutting resource usage by 10%.",
         "Architected and delivered an MCP (Model Context Protocol) server as a shim in front of the contributor API layer, enabling AI tooling to interact with backend upload workflows and integrating AI capabilities directly into engineering processes.",
-        "Led client-side facial detection model work and managed delivery of Release Form Similarity, both shipped to production; improvements scaled ingestion quality, reduced reviewer kickbacks, and shortened asset approval time.",
-        "Led people management including regular one-on-ones, performance reviews, and career development conversations to support individual growth and team retention.",
-        "Merged two distinct engineering teams (Contributor Apps and Review Apps) into a single cohesive cross-functional unit, driving knowledge cross-pollination, eliminating delivery silos, and maintaining team stability through the transition.",
-        "Guided the organization through two company-wide restructuring events while preserving team continuity and morale.",
-        "Drove methodology change from Agile Sprint to Shape Up, improving project scoping discipline and delivery predictability.",
-        "Partnered with cross-functional stakeholders to implement company-wide QA policies and enablement programs, improving test efficiency by 15% across teams.",
-        "We met all OKR targets by delivering multiple releases daily through automated testing, slashing MTTR to under 5 minutes, maintaining a sub-15-minute CI pipeline SLA, and averaging fewer than one on-call error per quarter."
+        "Delivered client‑side facial detection and Release Form Similarity features, improving ingestion quality and cutting asset approval time.",
+        "Merged two distinct engineering teams (Contributor Apps and Review Apps) into a single cohesive cross-functional unit and guided the organization through two company-wide restructuring events, driving knowledge cross-pollination, eliminating delivery silos, and preserving team continuity, stability, and morale through every transition.",
+        "Leading strategic planning for a long-term content unification initiative across all Shutterstock brands, designed to significantly elevate customer experience through a cohesive content catalog while enabling streamlined marketplace management for contributors.",
+        "Achieved 100% of OKR targets by delivering multiple releases daily through automated testing, maintaining a 99% (two nines) availability SLO with average restoration under 5 minutes, a sub-15-minute CI pipeline SLA, and averaging fewer than one on-call error per quarter."
       ],
       "location": "Remote"
     },
@@ -211,7 +209,8 @@
         "Cross-functional Stakeholder Alignment",
         "Org Design",
         "CI/CD Strategy",
-        "QA Policy Development"
+        "QA Policy Development",
+        "Stakeholder Management"
       ]
     },
     {
